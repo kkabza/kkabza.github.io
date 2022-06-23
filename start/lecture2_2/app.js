@@ -13,7 +13,7 @@ class App{
 		this.scene.background = new THREE.Color(0xaaaaaa);
 
 		this.render = new THREE.WebGL1Renderer({antialias: true});
-		this.render.setPixelRation( window.devicePixelRatio);
+		this.render.setPixelRatio( window.devicePixelRatio);
 		this.render.setSize( window.innerWidth,window.innerHeight);
 		container.appendChild( this.render.bind(this.render.domElement));
 		this.render.setAnimationLoop(this.render.bind(this))
