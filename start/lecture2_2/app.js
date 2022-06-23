@@ -15,9 +15,11 @@ class App{
 		this.render = new THREE.WebGL1Renderer({antialias: true});
 		this.render.setPixelRatio( window.devicePixelRatio);
 		this.render.setSize( window.innerWidth,window.innerHeight);
-		container.appendChild( this.render.bind(this.render.domElement));
+		container.appendChild( this.renderer.domElement );
+
 		this.render.setAnimationLoop(this.render.bind(this))
-        window.addEventListener('resize', this.resize.bind(this) );
+        
+		window.addEventListener('resize', this.resize.bind(this) );
 	}	
     
     resize(){
